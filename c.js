@@ -5,11 +5,18 @@
     //     console.log('Xin chao, Toi ten la ' + this.name);
     // }
 // }
+class School {
+    constructor(name, address) {
+        this.name = name;
+        this.address = address;
+    }
+}
 
 class Person {
-    constructor(ten, tuoi) {
-        this.name = ten;
-        this.age = tuoi; 
+    constructor(name, age, school) {
+        this.name = name;
+        this.age = age;
+        this.school = school;
     }
 
     sayHello() {
@@ -17,8 +24,9 @@ class Person {
     }
 }
 
-const a = new Person('Teo', 10);
+const kpt = new School('KPT', '92 LTR');
+const a = new Person('Teo', 10, kpt);
 a.sayHello();
 console.log(a);
 a.name = 'Teo Nguyen';
-console.log(a);
+console.log(a.school.name);
